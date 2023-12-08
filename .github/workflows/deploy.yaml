@@ -67,5 +67,6 @@ jobs:
     - name: Deploy
       run: |-
         kubectl apply -f dev-manifest.yaml
+        kubectl apply -f prod-manifest.yaml
         kubectl rollout status deployment/$DEPLOYMENT_NAME
         kubectl get services -o wide
